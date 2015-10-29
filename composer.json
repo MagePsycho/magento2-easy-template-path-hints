@@ -1,0 +1,31 @@
+{
+  "name": "magepsycho/magento2-easypathhints",
+  "description": "Easy Template Path Hints for Magento 2",
+  "require": {
+    "php": "~5.5.0|~5.6.0|~7.0.0",
+    "magento/framework": "~1.0.0"
+  },
+  "type": "magento2-module",
+  "license": "OSL-3.0",
+  "version": "1.0.0",
+  "extra": {
+    "map": [
+      [
+        "*",
+        "MagePsycho/Easypathhints"
+      ]
+    ]
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": { "MagePsycho\\Easypathhints\\": "" }
+  },
+  "authors": [
+    {
+      "name": "Raj KB",
+      "email": "magepsycho@gmail.com",
+      "homepage": "http://www.magepsycho.com",
+      "role": "Developer"
+    }
+  ]
+}
