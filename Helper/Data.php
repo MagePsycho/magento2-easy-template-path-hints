@@ -19,7 +19,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 	const XML_PATH_SAVE_IN_COOKIE   = 'magepsycho_easypathhints/general/save_in_cookie';
 	const XML_PATH_SHOW_PROFILER    = 'magepsycho_easypathhints/general/show_profiler';
 
-	const XML_PATH_DEV_DEBUG_TEMPLATE_HINTS         = 'dev/debug/template_hints';
+	const XML_PATH_DEV_DEBUG_TEMPLATE_HINTS         = 'dev/debug/template_hints_storefront';
 	const XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_BLOCKS  = 'dev/debug/template_hints_blocks';
 
 	/**
@@ -126,6 +126,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
 	public function shouldShowTemplatePathHints()
 	{
+
 		$isActive			= $this->isEnabled();
 		$tp					= $this->_getRequest()->getParam('tp');
 		$accessCode			= $this->_getRequest()->getParam('code');
