@@ -12,6 +12,26 @@ Functionality
 - Option to require access code
 - Option to save settings in cookie
 
+
+<h2>Install:</h2>
+First add repository to composer configuration:
+```bash
+composer config repositories.magepsychotemplatehints vcs git@github.com:MagePsycho/magento2-easy-template-path-hints
+```
+Require new package with composer:
+```bash
+composer require magepsycho/magento2-easy-template-path-hints:dev-master
+```
+Enable module
+```bash
+php bin/magento module:enable MagePsycho_Easypathhints
+```
+
+Flush everything:
+```bash
+php bin/magento setup:upgrade
+```
+
 How to use?
 -------------
 

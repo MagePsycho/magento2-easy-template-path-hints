@@ -1,6 +1,7 @@
 <?php
-namespace MagePsycho\Easypathhints\Model;
-
+namespace MagePsycho\Easypathhints\Observer;
+use Magento\Framework\Event\Observer;
+use Magento\Framework\Event\ObserverInterface;
 /**
  * Observer Class
  *
@@ -10,7 +11,7 @@ namespace MagePsycho\Easypathhints\Model;
  * @website    http://www.magepsycho.com
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-class Observer
+class EasyTemplateHintsObserver implements ObserverInterface
 {
 
 	/**
@@ -35,15 +36,15 @@ class Observer
 		$this->_mutableConfig   = $mutableConfig;
 	}
 
-	/**
-	 * @param \Magento\Framework\Event\Observer $observer
-	 *
-	 * @return $this
-	 */
-	public function controllerActionPredispatch(\Magento\Framework\Event\Observer $observer)
+
+
+
+	public function execute(\Magento\Framework\Event\Observer $observer)
 	{
+
 		$this->_helper->log($observer->getEvent()->getName(), true);
 		if ($this->_helper->shouldShowTemplatePathHints()) {
+
 			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_BLOCKS, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 
