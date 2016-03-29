@@ -1,7 +1,9 @@
 <?php
 namespace MagePsycho\Easypathhints\Observer;
+
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
+
 /**
  * Observer Class
  *
@@ -35,9 +37,6 @@ class EasyTemplateHintsObserver implements ObserverInterface
 		$this->_helper          = $helper;
 		$this->_mutableConfig   = $mutableConfig;
 	}
-
-
-
 
 	public function execute(\Magento\Framework\Event\Observer $observer)
 	{

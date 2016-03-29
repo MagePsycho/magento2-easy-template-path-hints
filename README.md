@@ -46,7 +46,7 @@ How to use?
 
 Screenshot
 -----------
-![Backend Settings](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/backend-settings.png "Backend Settings")
+![Backend Settings](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/docs/backend-settings.png "Backend Settings")
 
 
 Support
