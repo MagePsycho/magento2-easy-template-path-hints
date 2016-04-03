@@ -14,7 +14,7 @@ use Magento\Framework\Data\Form\Element\AbstractElement;
  */
 class Version extends \Magento\Config\Block\System\Config\Form\Field
 {
-	const EXTENSION_URL = 'http://www.magepsycho.com';
+	const EXTENSION_URL = 'http://www.magepsycho.com/extensions.html';
 
 	/**
 	 * @var \MagePsycho\Easypathhints\Helper\Data $helper

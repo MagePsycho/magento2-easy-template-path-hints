@@ -8,7 +8,7 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="magepsycho" translate="label" sortOrder="200">
             <label>MagePsycho</label>
@@ -16,7 +16,7 @@
         <section id="magepsycho_easypathhints"  showInDefault="1">
             <tab>magepsycho</tab>
             <label>Easy Template Path Hints</label>
-            <resource>Magento_Config::config</resource>
+            <resource>MagePsycho_Easypathhints::config</resource>
             <group id="general"  showInDefault="1">
                 <label>General Settings</label>
                 <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">

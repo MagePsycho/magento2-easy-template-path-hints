@@ -40,8 +40,7 @@ class EasyTemplateHintsObserver implements ObserverInterface
 
 	public function execute(\Magento\Framework\Event\Observer $observer)
 	{
-
-		$this->_helper->log($observer->getEvent()->getName(), true);
+		#$this->_helper->log($observer->getEvent()->getName(), true);
 		if ($this->_helper->shouldShowTemplatePathHints()) {
 
 			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
