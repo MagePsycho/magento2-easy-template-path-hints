@@ -43,7 +43,8 @@ class EasyTemplateHintsObserver implements ObserverInterface
 		#$this->_helper->log($observer->getEvent()->getName(), true);
 		if ($this->_helper->shouldShowTemplatePathHints()) {
 
-			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_STOREFRONT, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_ADMIN, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 			$this->_mutableConfig->setValue(\MagePsycho\Easypathhints\Helper\Data::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_BLOCKS, 1, \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 
 			if ($this->_helper->getShowProfiler()) {
