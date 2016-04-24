@@ -39,9 +39,11 @@ class Version extends \Magento\Config\Block\System\Config\Form\Field
     protected function _getElementHtml(AbstractElement $element)
     {
         $extensionVersion = $this->_helper->getExtensionVersion();
+        $extensionTitle   = 'Easy Template Path Hints';
         $versionLabel     = sprintf(
-            '<a href="%s" title="Easy Template Path Hints" target="_blank">%s</a>',
+            '<a href="%s" title="%s" target="_blank">%s</a>',
             self::EXTENSION_URL,
+            $extensionTitle,
             $extensionVersion
         );
         $element->setValue($versionLabel);

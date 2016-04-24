@@ -16,16 +16,15 @@ use Magento\Framework\Module\ModuleListInterface;
  */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
+    const XML_PATH_ENABLED     = 'general/enabled';
+    const XML_PATH_DEBUG       = 'general/debug';
+    const XML_PATH_ACCESS_CODE = 'general/access_code';
+    const XML_PATH_SAVE_COOKIE = 'general/save_in_cookie';
+    const XML_PATH_PROFILER    = 'general/show_profiler';
 
-    const XML_PATH_ENABLED          = 'magepsycho_easypathhints/general/enabled';
-    const XML_PATH_DEBUG            = 'magepsycho_easypathhints/general/debug';
-    const XML_PATH_ACCESS_CODE      = 'magepsycho_easypathhints/general/access_code';
-    const XML_PATH_SAVE_IN_COOKIE   = 'magepsycho_easypathhints/general/save_in_cookie';
-    const XML_PATH_SHOW_PROFILER    = 'magepsycho_easypathhints/general/show_profiler';
-
-    const XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_STOREFRONT = 'dev/debug/template_hints_storefront';
-    const XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_ADMIN = 'dev/debug/template_hints_admin';
-    const XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_BLOCKS = 'dev/debug/template_hints_blocks';
+    const XML_PATH_DEBUG_TEMPLATE_FRONT = 'dev/debug/template_hints_storefront';
+    const XML_PATH_DEBUG_TEMPLATE_ADMIN = 'dev/debug/template_hints_admin';
+    const XML_PATH_DEBUG_BLOCKS         = 'dev/debug/template_hints_blocks';
 
     /**
     * Cookie key for template path
@@ -83,6 +82,19 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     }
 
     /**
+     * @param $xmlPath
+     * @param string $section
+     *
+     * @return string
+     */
+    public function getConfigPath(
+        $xmlPath,
+        $section = 'magepsycho_easypathhints'
+    ) {
+        return $section . '/' . $xmlPath;
+    }
+
+    /**
      * Check if enabled
      *
      * @return string|null
@@ -90,7 +102,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function isEnabled()
     {
         return $this->scopeConfig->getValue(
-            self::XML_PATH_ENABLED,
+            $this->getConfigPath(self::XML_PATH_ENABLED),
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
@@ -98,7 +110,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getDebugStatus()
     {
         return $this->scopeConfig->getValue(
-            self::XML_PATH_DEBUG,
+            $this->getConfigPath(self::XML_PATH_DEBUG),
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
@@ -106,7 +118,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getAccessCode()
     {
         return $this->scopeConfig->getValue(
-            self::XML_PATH_ACCESS_CODE,
+            $this->getConfigPath(self::XML_PATH_ACCESS_CODE),
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
@@ -114,7 +126,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getSaveInCookie()
     {
         return $this->scopeConfig->getValue(
-            self::XML_PATH_SAVE_IN_COOKIE,
+            $this->getConfigPath(self::XML_PATH_SAVE_COOKIE),
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
@@ -122,7 +134,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getShowProfiler()
     {
         return $this->scopeConfig->getValue(
-            self::XML_PATH_SHOW_PROFILER,
+            $this->getConfigPath(self::XML_PATH_PROFILER),
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE
         );
     }
@@ -130,11 +142,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function shouldShowTemplatePathHints()
     {
 
-        $isActive			= $this->isEnabled();
-        $tp					= $this->_getRequest()->getParam('tp');
-        $accessCode			= $this->_getRequest()->getParam('code');
+        $isActive           = $this->isEnabled();
+        $tp                 = $this->_getRequest()->getParam('tp');
+        $accessCode         = $this->_getRequest()->getParam('code');
 
-        $dbAccessCode		= $this->getAccessCode();
+        $dbAccessCode       = $this->getAccessCode();
         $dbCookieStatus     = $this->getSaveInCookie();
 
         $cookieStatus       = $this->_getRequest()->getParam('cookie', -1);
@@ -195,7 +207,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function deleteDebugCookie()
     {
-        $cookieMetadata = $this->_cookieMetadataFactory->createPublicCookieMetadata();
+        $cookieMetadata = $this->_cookieMetadataFactory
+            ->createPublicCookieMetadata();
         $this->_cookieManager->deleteCookie(self::COOKIE_NAME, $cookieMetadata);
         return $this;
     }

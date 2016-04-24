@@ -46,19 +46,19 @@ class EasyTemplateHintsObserver implements ObserverInterface
         if ($this->_helper->shouldShowTemplatePathHints()) {
 
             $this->_mutableConfig->setValue(
-                EasypathhintsHelper::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_STOREFRONT,
+                EasypathhintsHelper::XML_PATH_DEBUG_TEMPLATE_FRONT,
                 1,
                 ScopeInterface::SCOPE_STORE
             );
 
             $this->_mutableConfig->setValue(
-                EasypathhintsHelper::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_ADMIN,
+                EasypathhintsHelper::XML_PATH_DEBUG_TEMPLATE_ADMIN,
                 1,
                 ScopeInterface::SCOPE_STORE
             );
 
             $this->_mutableConfig->setValue(
-                EasypathhintsHelper::XML_PATH_DEV_DEBUG_TEMPLATE_HINTS_BLOCKS,
+                EasypathhintsHelper::XML_PATH_DEBUG_BLOCKS,
                 1,
                 ScopeInterface::SCOPE_STORE
             );
