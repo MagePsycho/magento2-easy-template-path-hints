@@ -24,7 +24,7 @@ composer require magepsycho/magento2-easy-template-path-hints:dev-master
 ```
 Enable module
 ```bash
-php bin/magento module:enable MagePsycho_Easypathhints
+php bin/magento module:enable MagePsycho_Easypathhints --clear-static-content
 ```
 
 Flush everything:
