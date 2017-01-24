@@ -16,7 +16,7 @@ Functionality
 <h2>Install:</h2>
 First add repository to composer configuration:
 ```bash
-composer config repositories.magepsychotemplatehints vcs git@github.com:MagePsycho/magento2-easy-template-path-hints
+composer config repositories.magepsychotemplatehints git git@github.com:MagePsycho/magento2-easy-template-path-hints
 ```
 Require new package with composer:
 ```bash
