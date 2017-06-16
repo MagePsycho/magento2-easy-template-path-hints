@@ -16,21 +16,27 @@ It is used to enable the template path hints on the fly just by using query stri
 ## Installation
 
 ### 1 Using Composer
-`composer config repositories.magepsychotemplatehints git git@github.com:MagePsycho/magento2-easy-template-path-hints`
-`composer require magepsycho/magento2-easy-template-path-hints:dev-master`
+```
+composer config repositories.magepsychotemplatehints git git@github.com:MagePsycho/magento2-easy-template-path-hints
+composer require magepsycho/magento2-easy-template-path-hints:dev-master
+```
 
 ### 2 Using Modman
-`modman init`
-`modman clone git@github.com:MagePsycho/magento2-easy-template-path-hints.git`
+```
+modman init
+modman clone git@github.com:MagePsycho/magento2-easy-template-path-hints.git
+```
 
 ### 3 Using Zip File
 * Download the [Extension Zip File](https://github.com/MagePsycho/magento2-easy-template-path-hints/archive/master.zip)
 * Extract & upload the files to `/path/to/magento2/app/code/MagePsycho/Easypathhints/`
 
 After installation by either means, enable the extension by running following commands (from root of Magento2 installation):
-`php bin/magento module:enable MagePsycho_Easypathhints --clear-static-content`
-`php bin/magento setup:upgrade`
-`php bin/magento cache:flush`
+```
+php bin/magento module:enable MagePsycho_Easypathhints --clear-static-content
+php bin/magento setup:upgrade`
+php bin/magento cache:flush
+```
 [Click here to read more on module packaging, installation & activation in Magento 2](http://www.blog.magepsycho.com/install-magento-2-module-from-github-or-bitbucket-repository-using-composer/)
 
 
