@@ -1,5 +1,7 @@
-<?xml version="1.0"?>
-<!--
+<?php
+
+namespace MagePsycho\Easypathhints\Model;
+
 /**
  * @category   MagePsycho
  * @package    MagePsycho_Easypathhints
@@ -7,7 +9,10 @@
  * @website    http://www.magepsycho.com
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
--->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="MagePsycho_Easypathhints" setup_version="1.1.0" />
-</config>
+class TemplateHintCookie extends Cookie
+{
+    /**
+     * Name of cookie that holds private content version
+     */
+    const COOKIE_NAME = 'magepsycho_easypathhints_active';
+}

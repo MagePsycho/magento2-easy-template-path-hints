@@ -2,7 +2,7 @@
   "name": "magepsycho/magento2-easy-template-path-hints",
   "description": "Easy Template Path Hints for Magento 2",
   "type": "magento2-module",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Raj KB",
@@ -14,7 +14,6 @@
     "OSL-3.0"
   ],
   "require": {
-    "php": "~5.6.0|7.0.2|~7.0.6",
     "magento/framework": "100.*"
   },
   "autoload": {

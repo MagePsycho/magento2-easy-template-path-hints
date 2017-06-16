@@ -1,4 +1,5 @@
 <?php
+
 namespace MagePsycho\Easypathhints\Observer;
 
 use Magento\Framework\Event\Observer;
@@ -6,6 +7,7 @@ use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\App\Config\MutableScopeConfigInterface;
 use Magento\Store\Model\ScopeInterface;
 use MagePsycho\Easypathhints\Helper\Data as EasypathhintsHelper;
+use MagePsycho\Easypathhints\Helper\Config as EasypathhintsConfigHelper;
 
 /**
  * Observer Class
@@ -15,9 +17,8 @@ use MagePsycho\Easypathhints\Helper\Data as EasypathhintsHelper;
  * @author     Raj KB <magepsycho@gmail.com>
  * @website    http://www.magepsycho.com
  */
-class EasyTemplateHintsObserver implements ObserverInterface
+class ControllerActionPredispatch implements ObserverInterface
 {
-
     /**
      * @var EasypathhintsHelper $helper
      */
@@ -46,19 +47,19 @@ class EasyTemplateHintsObserver implements ObserverInterface
         if ($this->_helper->shouldShowTemplatePathHints()) {
 
             $this->_mutableConfig->setValue(
-                EasypathhintsHelper::XML_PATH_DEBUG_TEMPLATE_FRONT,
+                EasypathhintsConfigHelper::XML_PATH_DEBUG_TEMPLATE_FRONT,
                 1,
                 ScopeInterface::SCOPE_STORE
             );
 
             $this->_mutableConfig->setValue(
-                EasypathhintsHelper::XML_PATH_DEBUG_TEMPLATE_ADMIN,
+                EasypathhintsConfigHelper::XML_PATH_DEBUG_TEMPLATE_ADMIN,
                 1,
                 ScopeInterface::SCOPE_STORE
             );
 
             $this->_mutableConfig->setValue(
-                EasypathhintsHelper::XML_PATH_DEBUG_BLOCKS,
+                EasypathhintsConfigHelper::XML_PATH_DEBUG_BLOCKS,
                 1,
                 ScopeInterface::SCOPE_STORE
             );

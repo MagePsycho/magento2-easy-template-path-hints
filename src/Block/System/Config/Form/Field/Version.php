@@ -13,7 +13,7 @@ use Magento\Framework\Data\Form\Element\AbstractElement;
  */
 class Version extends \Magento\Config\Block\System\Config\Form\Field
 {
-    const EXTENSION_URL = 'http://www.magepsycho.com/extensions.html';
+    const EXTENSION_URL = 'http://www.magepsycho.com/magento-2-easy-template-path-hints.html';
 
     /**
      * @var \MagePsycho\Easypathhints\Helper\Data $helper
