@@ -43,7 +43,10 @@ class ControllerActionPredispatch implements ObserverInterface
 
     public function execute(Observer $observer)
     {
-        $this->_helper->log($observer->getEvent()->getName(), true);
+        if (version_compare($this->_helper->getMagentoVersion(), '2.1.3', '>=')) {
+            return $this;
+        }
+
         if ($this->_helper->shouldShowTemplatePathHints()) {
 
             $this->_mutableConfig->setValue(

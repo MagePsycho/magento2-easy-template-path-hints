@@ -34,26 +34,35 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      */
     protected $templateHintCookie;
 
+    /**
+     * @var \Magento\Framework\App\ProductMetadataInterface
+     */
+    protected $mageMetaData;
+
     public function __construct(
         Context $context,
         \MagePsycho\Easypathhints\Logger\Logger $customLogger,
         \MagePsycho\Easypathhints\Helper\Config $configHelper,
         \MagePsycho\Easypathhints\Model\TemplateHintCookie $templateHintCookie,
-        ModuleListInterface $moduleList
+        ModuleListInterface $moduleList,
+        \Magento\Framework\App\ProductMetadataInterface $mageMetaData
     ) {
         $this->customLogger            = $customLogger;
         $this->configHelper            = $configHelper;
         $this->templateHintCookie      = $templateHintCookie;
         $this->moduleList              = $moduleList;
+        $this->mageMetaData            = $mageMetaData;
 
         parent::__construct($context);
     }
 
     public function shouldShowTemplatePathHints()
     {
+        if (!$this->configHelper->isActive()) {
+            return false;
+        }
         $tp                 = $this->_getRequest()->getParam('tp');
         $accessCode         = $this->_getRequest()->getParam('code');
-        $isActive           = $this->configHelper->isActive();
         $dbAccessCode       = $this->configHelper->getAccessCode();
         $dbCookieStatus     = $this->configHelper->getSaveInCookie();
         $cookieStatus       = $this->_getRequest()->getParam('cookie', -1);
@@ -74,8 +83,8 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             }
         }
 
-        if (   ($tp && $isActive && $checkAccessCode)
-            || ($isActive && $this->templateHintCookie->get())
+        if (  ($tp && $checkAccessCode)
+            || $this->templateHintCookie->get()
         ) {
             return true;
         }
@@ -88,6 +97,11 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $moduleCode = 'MagePsycho_Easypathhints';
         $moduleInfo = $this->moduleList->getOne($moduleCode);
         return $moduleInfo['setup_version'];
+    }
+
+    public function getMagentoVersion()
+    {
+        return $this->mageMetaData->getVersion();
     }
 
     /**
