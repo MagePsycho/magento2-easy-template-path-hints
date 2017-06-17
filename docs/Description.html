@@ -1,0 +1,55 @@
+<h3>Introduction</h3>
+<p>Magento 2 Easy Template Path Hints extension is used to turn on the template path hints for both frontend & backend on the fly just by using query strings.
+    <br />
+    (This is the ported version of <a href="http://www.magepsycho.com/easy-template-path-hints.html" title="Magento 1 Easy Template Path Hints">Magento 1 Easy Template Path Hints</a> for Magento 2)
+</p>
+
+<h3>Key Features</h3>
+<h4>Turn on Template Path Hints for Frontend</h4>
+<p>You can easily turn on the template path hints for frontend just by appending query string: <strong>?tp=1&code=[access-code]</strong><br />
+    This feature gives you the power to turn on/off the template path hints on the fly without going back and forth with System > Developer Settings.
+</p>
+
+<h4>Turn on Template Path Hints for Backend</h4>
+<p>Similar to frontend, You can easily turn on the template path hints for backend just by appending query string: <strong>?tp=1&code=[access-code]</strong><br />
+
+</p>
+
+<h4>Save settings in Cookie</h4>
+<p>
+    You can save the settings in cookie so that you don't have to append query string again and again in order to turn on the template path hints.<br />
+    This feature is really helpful while debugging form post pages, transactional email templates etc.
+</p>
+
+<h3>Installation</h3>
+<p>
+    1. Download the extension .zip file and extract it.<br />
+    2. Copy the extension files from src/ folder to the {your-magento2-dir}/app/code/MagePsycho/Easypathhints<br />
+    3. Once you have copied all the extension files to the proper directory, run the following commands: <br />
+    <code>php bin/magento module:enable MagePsycho_Easypathhints --clear-static-content</code>
+    <code>php bin/magento setup:upgrade</code>
+    4. Go to Admin > Stores > Configuration > MagePsycho > Easy Template Path Hints > Configure your settings here...
+
+</p>
+
+<h3>Live Demo</h3>
+<p>Coming Soon.</p>
+
+<h3>Changelog</h3>
+<p>
+    <strong>Version 1.0.2 - 1.1.0 (2017-06-16)</strong><br />
+    - Refactored the code (Logger, Cookie, Config etc.)<br />
+    - Fixed template path hints not working for Magento versions 2.1.3+<br /><br />
+
+    <strong>Version 1.0.1 - 1.0.2 (2016-04-03)</strong><br />
+    - Fixed template path hints for admin.<br />
+    - Refactored code.<br /><br />
+
+    <strong>Version 1.0.0 - 1.0.1 (2016-04-03)</strong><br />
+    - Fixed relative XSD path of xml configurations.<br />
+    - Added modman file.<br />
+    - Refactored code.<br /><br />
+
+    <strong>Version 1.0.0 (2015-10-30)</strong><br />
+    - Initial Release.<br />
+</p>

@@ -13,10 +13,15 @@
         <tab id="magepsycho" translate="label" sortOrder="200">
             <label>MagePsycho</label>
         </tab>
-        <section id="magepsycho_easypathhints"  showInDefault="1">
+        <section id="magepsycho_easypathhints" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
             <tab>magepsycho</tab>
             <label>Easy Template Path Hints</label>
             <resource>MagePsycho_Easypathhints::config</resource>
+            
+            <group id="support" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <frontend_model>MagePsycho\Easypathhints\Block\System\Config\Form\Fieldset\Support</frontend_model>
+            </group>
+            
             <group id="general"  showInDefault="1">
                 <label>General Settings</label>
                 <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
@@ -29,12 +34,15 @@
                 </field>
                 <field id="access_code" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Access Code</label>
-                    <comment><![CDATA[If access code is used then you need to append it with query string as:<br />http://magento-store-url.com/any-page<strong>?tp=1&code=your-access-code</strong><br />If this field is left empty, you can simply trigger template path hints by adding: <strong>?tp=1</strong>. So the full query string looks like<br /> Note that this works both for frontend and admin pages.]]></comment>
+                    <comment><![CDATA[If access code is used, append it with query string as:<br />http://magento-store-url.com/any-page<strong>?tp=1&code=your-access-code</strong><br />If this field is left empty, you can simply trigger template path hints by adding: <strong>?tp=1</strong>.<br /><strong>Note</strong> that this works both for frontend and admin pages.]]></comment>
                 </field>
                 <field id="save_in_cookie" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Save in Cookie</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[If enabled, once the easy template path hints is shown, it will be shown unless you delete the cookie. You just have to append: http://magento-store-url.com/any-page?tp=1&code=your-access-code<strong>&cookie=1</strong>.<br />To clear cookies, add <strong>&cookie=0</strong> instead.<br /><br />(Especially useful while debugging post form pages, transactional email templates etc.)]]></comment>
+                    <comment><![CDATA[If enabled, it will turn on the easy template path hints until you delete the cookie. <br />
+                    <strong>To Enable Cookie</strong>: /?tp=1&code=your-access-code<strong>&cookie=1<br />
+                    <strong>To clear cookies</strong>: /?tp=1&code=your-access-code<strong>&cookie=1<br />
+                    (Especially useful for debugging post form pages, transactional email templates etc.)]]></comment>
                 </field>
                 <!--field id="show_profiler" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Show Profiler</label>
