@@ -34,14 +34,16 @@
                 </field>
                 <field id="access_code" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Access Code</label>
-                    <comment><![CDATA[If access code is used, append it with query string as:<br />http://magento-store-url.com/any-page<strong>?tp=1&code=your-access-code</strong><br />If this field is left empty, you can simply trigger template path hints by adding: <strong>?tp=1</strong>.<br /><strong>Note</strong> that this works both for frontend and admin pages.]]></comment>
+                    <comment><![CDATA[<strong>Not Empty Access Code</strong>: /?tp=1&code=[access-code]<br />
+                    <strong>Empty Access Code</strong>: /?tp=1<br />
+                    <strong>Note</strong> that this works both for frontend and admin pages.]]></comment>
                 </field>
                 <field id="save_in_cookie" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Save in Cookie</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment><![CDATA[If enabled, it will turn on the easy template path hints until you delete the cookie. <br />
-                    <strong>To Enable Cookie</strong>: /?tp=1&code=your-access-code<strong>&cookie=1<br />
-                    <strong>To clear cookies</strong>: /?tp=1&code=your-access-code<strong>&cookie=1<br />
+                    <comment><![CDATA[If enabled, it will turn on the template path hints until you delete the cookie. <br />
+                    <strong>To Enable Cookie</strong>: /?tp=1&code=[access-code]&cookie=1<br />
+                    <strong>To Clear cookies</strong>: /?tp=1&code=[access-code]&cookie=0 OR clear browser cookies<br />
                     (Especially useful for debugging post form pages, transactional email templates etc.)]]></comment>
                 </field>
                 <!--field id="show_profiler" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
