@@ -52,6 +52,8 @@ php bin/magento cache:flush
 
 ## Screenshot
 ![Backend Settings](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/docs/backend-settings.png "Backend Settings")
+
+
 ![Frontend Demo](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/docs/magento-2-easy-template-path-hints-frontend.png "Frontend Demo")
 
 ## Changelog
