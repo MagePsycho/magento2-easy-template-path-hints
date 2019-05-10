@@ -57,6 +57,9 @@ php bin/magento cache:flush
 ![Frontend Demo](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/docs/magento-2-easy-template-path-hints-frontend.png "Frontend Demo")
 
 ## Changelog
+**Version 1.1.2 (2018-05-10)**
+* Fixed wrong module path if installed via composer
+
 **Version 1.1.1 (2018-05-10)**
 * Fixed template block class hints not showing
 
