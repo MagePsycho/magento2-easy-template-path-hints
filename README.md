@@ -57,15 +57,18 @@ php bin/magento cache:flush
 ![Frontend Demo](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/docs/magento-2-easy-template-path-hints-frontend.png "Frontend Demo")
 
 ## Changelog
-**Version 1.0.2 - 1.1.0 (2017-06-16)**
+**Version 1.1.1 (2018-05-10)**
+* Fixed template block class hints not showing
+
+**Version 1.1.0 (2017-06-16)**
 * Refactored the code (Logger, Cookie, Config etc.)
 * Fixed template path hints not working for Magento versions 2.1.3+
 
-**Version 1.0.1 - 1.0.2 (2016-04-03)**
+**Version 1.0.2 (2016-04-03)**
 * Fixed template path hints for admin.
 * Refactored code.
 
-**Version 1.0.0 - 1.0.1 (2016-04-03)**
+**Version 1.0.1 (2016-04-03)**
 * Fixed relative XSD path of xml configurations.
 * Added modman file.
 * Refactored code.

@@ -24,8 +24,8 @@
         </arguments>
     </type>
 
-
-    <preference for="Magento\Developer\Model\TemplateEngine\Plugin\DebugHints"
-                type="MagePsycho\Easypathhints\Model\Preference\TemplateEngine\Plugin\DebugHints" />
+    <type name="Magento\Framework\View\TemplateEngineFactory">
+        <plugin name="mp_debug_hints" type="MagePsycho\Easypathhints\Plugin\TemplateEngine\DebugHints" sortOrder="20"/>
+    </type>
 
 </config>
