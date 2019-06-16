@@ -21,8 +21,8 @@
             <group id="support" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
                 <frontend_model>MagePsycho\Easypathhints\Block\System\Config\Form\Fieldset\Support</frontend_model>
             </group>
-            
-            <group id="general"  showInDefault="1">
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Settings</label>
                 <field id="version" translate="label" type="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Version</label>
