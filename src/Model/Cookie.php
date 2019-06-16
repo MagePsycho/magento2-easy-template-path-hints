@@ -11,7 +11,7 @@ use Magento\Framework\Stdlib\CookieManagerInterface;
  * @category   MagePsycho
  * @package    MagePsycho_Easypathhints
  * @author     Raj KB <magepsycho@gmail.com>
- * @website    http://www.magepsycho.com
+ * @website    https://www.magepsycho.com
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 class Cookie
@@ -58,11 +58,6 @@ class Cookie
         return $this->cookieManager->getCookie(static::COOKIE_NAME);
     }
 
-    /**
-     * @param string $value
-     * @param int $duration
-     * @return void
-     */
     public function set($value, $duration = 86400)
     {
         $publicCookieMetadata = $this->cookieMetadataFactory
@@ -78,9 +73,6 @@ class Cookie
         );
     }
 
-    /**
-     * @return void
-     */
     public function delete()
     {
         $publicCookieMetadata = $this->cookieMetadataFactory

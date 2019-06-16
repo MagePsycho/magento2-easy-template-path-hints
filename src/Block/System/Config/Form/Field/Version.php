@@ -1,4 +1,5 @@
 <?php
+
 namespace MagePsycho\Easypathhints\Block\System\Config\Form\Field;
 
 use Magento\Framework\Data\Form\Element\AbstractElement;
@@ -9,11 +10,11 @@ use Magento\Framework\Data\Form\Element\AbstractElement;
  * @category   MagePsycho
  * @package    MagePsycho_Easypathhints
  * @author     Raj KB <magepsycho@gmail.com>
- * @website    http://www.magepsycho.com
+ * @website    https://www.magepsycho.com
  */
 class Version extends \Magento\Config\Block\System\Config\Form\Field
 {
-    const EXTENSION_URL = 'http://www.magepsycho.com/magento-2-easy-template-path-hints.html';
+    const EXTENSION_URL = 'https://www.magepsycho.com/magento-2-easy-template-path-hints.html';
 
     /**
      * @var \MagePsycho\Easypathhints\Helper\Data $helper

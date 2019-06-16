@@ -1,35 +1,39 @@
-<div style="background:#EAF0EE;border:1px solid #CCCCCC;margin-bottom:10px;padding:11px 0 0 10px;">
+<div style="background:#f8f8f8; border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3; margin-bottom:10px;padding:12px 0 0 12px;">
     <h4>
-        <img src="https://www.magepsycho.com/_logo.svg" style="height: 66px; padding: 8px 0 8px 3px;"/><br>
-        <div style="padding-left: 15px;">
+        <img src="https://www.magepsycho.com/_logo.svg" alt="MagePsycho" style="height: 60px;"/><br>
+        <div style="padding-left: 11px;">
             <p>
                 <strong style="color:#EA7601;">
-                    <?php echo __('Easy Template Path Hints v') ?><?php echo $this->getModuleVersion() ?>
-                    <?php echo __(' by') ?>
+                    Easy Template Path Hints v<?= /* @noEscape */ $block->getModuleVersion() ?> by
                 </strong>
-                <a target="_blank" href="https://www.magepsycho.com">
+                <a target="_blank" href="https://www.magepsycho.com" title="MagePsycho Store - Free / Premium Magento Extensions,  Themes &amp; Services">
                     <strong>MagePsycho</strong>
                 </a>
             </p>
             <p>
-                <?php echo __('Need help? See our ') ?>
-                <a href="https://blog.magepsycho.com" target="_blank">
-                    <?php echo __('Blog') ?>
+                <?= /* @noEscape */ __('Need help? See our') ?>
+                <a href="https://blog.magepsycho.com" target="_blank" title="MagePsycho Blog - Tutorials, Tips &amp; Tricks for Magento, PHP, MySQL &amp; DevOps">
+                    <?= /* @noEscape */ __('Blog') ?>
                 </a>
-                <?php echo __(' or contact us via') ?>
-                <a href="https://www.magepsycho.com/contact" target="_blank">
-                    <?php echo __('Website') ?>
-                </a>
-                <?php echo __(' Got feedback? ') ?>
-                <a href="mailto:magepsycho@gmail.com?Subject=M2 Easy Template Path Hints Version <?php echo $this->getModuleVersion()?> for <?php echo $this->getMageVersion() ?>">
-                    <?php echo __('Email us') ?>
+                <?= /* @noEscape */ __(' or contact us via') ?>
+                <a href="https://www.magepsycho.com/contact" target="_blank" title="MagePsycho Store - Contact Us"><?= /* @noEscape */ __('form') ?></a>.
+                <?= /* @noEscape */ __(' Got feedback? ') ?>
+                <a href="mailto:magepsycho@gmail.com?Subject=M2 Sales Promotion Pro Version <?= $block->escapeHtml($block->getModuleVersion()) ?> for <?= $block->escapeHtml($block->getMageVersion()) ?>">
+                    <?= /* @noEscape */ __('Email us') ?>
                 </a>
             </p>
 
-            <p style="padding-bottom: 15px;"><?php echo __('You can find more extensions in our ') ?><a href="https://www.magepsycho.com/extensions.html" target="_blank"><?php echo __('Store') ?></a></p>
+            <p style="padding-bottom: 10px;"><?= /* @noEscape */__('You can find more extensions in our') ?>
+                <a href="https://www.magepsycho.com/extensions/magento-2.html" target="_blank">
+                    <?= /* @noEscape */ __('Store') ?>
+                </a>
+            </p>
 
-            <h3 style="padding-bottom: 10px;">
-                <a style="padding-top: 8px;padding-bottom:10px;padding-left: 15px;padding-right: 30px;background-color:#EB5202 ;color:white;font-weight: bold" href="https://www.magepsycho.com/contact" target="_blank"><?php echo __('Need Support? Contact us') ?></a>
+            <h3>
+                <a style="padding: 6px 30px 6px 30px;background-color:#EB5202; color:white; font-weight: bold;"
+                   href="https://www.magepsycho.com/contact" title="MagePsycho Store - Contact Us" target="_blank">
+                    <?= /* @noEscape */ __('Need Support? Contact us') ?>
+                </a>
             </h3>
         </div>
     </h4>

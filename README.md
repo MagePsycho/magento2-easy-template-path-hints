@@ -1,7 +1,7 @@
 # Magento 2 Easy Template Path Hints
 
 ##  Overview
-[Magento 2 Easy Template Path Hints](http://www.magepsycho.com/magento-2-easy-template-path-hints.html) is used to enable the template path hints on the fly just by using query strings.
+[Magento 2 Easy Template Path Hints](https://www.magepsycho.com/magento-2-easy-template-path-hints.html) is used to enable the template path hints on the fly just by using query strings.
 
 (This is an ported version of [Easy Template Path Hints - Magento 1](https://github.com/MagePsycho/MagePsycho_Easypathhints) for Magento 2)
 
@@ -82,7 +82,7 @@ php bin/magento cache:flush
 ## Need Support?
 If you encounter any problems or bugs, please create an issue on [GitHub](https://github.com/MagePsycho/magento2-easy-template-path-hints/issues).
 OR
-You can send an email to magepsycho[at]gmail.com OR submit the [Contact Us](http://www.magepsycho.com/contacts/) form in case you need any kind of assistance, support and quotation.
+You can send an email to magepsycho[at]gmail.com OR submit the [Contact Us](https://www.magepsycho.com/contact) form in case you need any kind of assistance, support and quotation.
 
 ## Contribution
 Any contribution to the development of Magento 2 Easy Template Path Hints is highly welcome. 

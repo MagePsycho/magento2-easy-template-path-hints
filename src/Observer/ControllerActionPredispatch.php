@@ -15,7 +15,7 @@ use MagePsycho\Easypathhints\Helper\Config as EasypathhintsConfigHelper;
  * @category   MagePsycho
  * @package    MagePsycho_Easypathhints
  * @author     Raj KB <magepsycho@gmail.com>
- * @website    http://www.magepsycho.com
+ * @website    https://www.magepsycho.com
  */
 class ControllerActionPredispatch implements ObserverInterface
 {
@@ -66,10 +66,6 @@ class ControllerActionPredispatch implements ObserverInterface
                 1,
                 ScopeInterface::SCOPE_STORE
             );
-
-            /*if ($this->_helper->getShowProfiler()) {
-                $_SERVER['MAGE_PROFILER'] = 'html';
-            }*/
         }
         return $this;
     }
