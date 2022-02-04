@@ -1,4 +1,18 @@
+<div align="center">
+
+![magento2-easy-template-path-hints](https://i.imgur.com/d8QEHRb.png)
 # Magento 2 Easy Template Path Hints
+
+</div>
+
+<div align="center">
+
+[![Packagist Version](https://img.shields.io/packagist/v/magepsycho/magento2-easy-template-path-hints?style=for-the-badge)](https://packagist.org/packages/magepsycho/magento2-easy-template-path-hints)
+[![Packagist Version](https://img.shields.io/packagist/dt/magepsycho/magento2-easy-template-path-hints.svg?style=for-the-badge)](https://packagist.org/packages/magepsycho/magento2-easy-template-path-hints/stats)
+![Supported Magento Versions](https://img.shields.io/badge/magento-%202.3_|_2.4-brightgreen.svg?logo=magento&longCache=true&style=for-the-badge)
+![License](https://img.shields.io/github/license/magepsycho/magento2-easy-template-path-hints?color=%23234&style=for-the-badge)
+
+</div>
 
 ##  Overview
 [Magento 2 Easy Template Path Hints](https://www.magepsycho.com/magento-2-easy-template-path-hints.html) is used to enable the template path hints on the fly just by using query strings.
@@ -79,11 +93,16 @@ php bin/magento cache:flush
 **Version 1.0.0 (2015-10-30)**
 * Initial Release
 
+## Authors
+
+- Raj KB [Maintainer] [![Twitter Follow](https://img.shields.io/twitter/follow/rajkbnp.svg?style=social)](https://twitter.com/rajkbnp)
+- `{{this could be you}}` (see "Contribution" section)
+
 ## Need Support?
 If you encounter any problems or bugs, please create an issue on [GitHub](https://github.com/MagePsycho/magento2-easy-template-path-hints/issues).
-OR
-You can send an email to magepsycho[at]gmail.com OR submit the [Contact Us](https://www.magepsycho.com/contact) form in case you need any kind of assistance, support and quotation.
+
+Please [visit our store](https://www.magepsycho.com/extensions/magento-2.html) for more FREE / paid extensions OR [contact us](https://magepsycho.com/contact) for customization / development services.
 
 ## Contribution
-Any contribution to the development of Magento 2 Easy Template Path Hints is highly welcome. 
-The best possibility to provide any code is to open a [pull request on GitHub](https://github.com/MagePsycho/magento2-easy-template-path-hints/pulls).
+Any contribution to the development of `magento2-easy-template-path-hints` is highly welcome.  
+The best possibility to provide any code is to open a [pull request on GitHub](https://github.com/MagePsycho/magento2-product-discount-label/pulls).
