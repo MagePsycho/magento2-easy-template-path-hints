@@ -80,6 +80,9 @@ php bin/magento setup:static-content:deploy
 ![Frontend Demo](https://raw.github.com/MagePsycho/magento2-easy-template-path-hints/master/docs/magento-2-easy-template-path-hints-frontend.png "Frontend Demo")
 
 ## Changelog
+**Version 1.1.3 (2022-02-14)**
+* Bumped the version for the sake of packagist release
+
 **Version 1.1.2 (2018-05-10)**
 * Fixed wrong module path if installed via composer
 

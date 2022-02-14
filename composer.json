@@ -3,7 +3,7 @@
   "description": "Easy Template Path Hints for Magento 2",
   "keywords": ["magento", "magento2 extension", "magento 2 extension", "extension", "module", "magento2 module", "magento 2 module", "debug", "template path hint", "development"],
   "type": "magento2-module",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "homepage": "https://www.magepsycho.com/magento-2-easy-template-path-hints.html",
   "authors": [
     {
